@@ -6,6 +6,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="백엔드 개발자 이규훈" />
+    <meta property="og:description" content="커피와 노트북만 있다면, 언제 어디서나 즐겁게 일하는 1년차 개발자 이규훈입니다." />
+    <meta property="og:image" content="images/docker.png" />
+    <meta property="og:url" content="https://lee-kyuhwun.github.io/web-porfolio/" />
+    <meta property="og:type" content="website" />
+
+
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
@@ -19,10 +28,16 @@
     <link rel="stylesheet" href="css/aos.css">
 
     <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/modal.css"> <!-- 추가한 CSS 파일 -->
+
+
 
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -653,7 +668,7 @@
     </div>
 </section>
 
-
+<!-- Toy Projects Section -->
 <section class="ftco-section ftco-project">
     <div class="container-fluid px-md-0">
         <div class="row no-gutters justify-content-center pb-5">
@@ -668,8 +683,8 @@
                      style="background-image: url(images/toyproject/스프링배치연습_프로필이미지.png); background-size:contain;">
                     <div class="overlay"></div>
                     <div class="text text-center p-4">
-                        <h3><a target="_blank"
-                               href="https://seed-collision-814.notion.site/36ec38923b4d4d9caaa0d22451abe349?pvs=4">🔗 PT
+                        <h3><a href="#" class="project-link" data-title="🔗 PT 이용권 관리 시스템"
+                               data-content="# 스프링 배치 연습 프로젝트\n\n- 비동기 배치\n- 배치 실패처리\n- 스프링 배치 5로 마이그레이션">🔗 PT
                             이용권 관리 시스템</a></h3>
                         <span>스프링 배치 연습을 위한 프로젝트이며 비동기 배치, 배치 실패처리, 기존 스프링 배치에서 스프링 배치 5로의 마이그레이션을 경험</span>
                     </div>
@@ -680,7 +695,8 @@
                      style="background-image: url(images/배달플랫폼.jpeg);  background-size:contain;">
                     <div class="overlay"></div>
                     <div class="text text-center p-4">
-                        <h3><a href="https://seed-collision-814.notion.site/ca4664b3408a4cb393672924a8c0d8a5?pvs=4">🔗 배달
+                        <h3><a href="#" class="project-link" data-title="🔗 배달 플랫폼"
+                               data-content="# 배달 플랫폼 프로젝트\n\n- Rabbit MQ\n- Grafana\n- ELK Stack\n- Kotlin">🔗 배달
                             플랫폼</a></h3>
                         <span>Rabbit MQ, Grafana, ELK Stack,Kotlin 등 다양한 기술 스택 습득을 위한 토이프로젝트</span>
                     </div>
@@ -691,16 +707,27 @@
                      style="background-image: url(images/대출도메인연습.png);  background-size:contain;">
                     <div class="overlay"></div>
                     <div class="text text-center p-4">
-                        <h3><a href="https://seed-collision-814.notion.site/9-ddedb41045304fde9c7819fa2a8a6234?pvs=4">대출
-                            도메인 연습 토이 프로젝트</a></h3>
+                        <h3><a href="#" class="project-link" data-title="대출 도메인 연습 토이 프로젝트"
+                               data-content="# 대출 도메인 연습 프로젝트\n\n- 9가지 대출 도메인 연습">대출 도메인 연습 토이 프로젝트</a></h3>
                         <span>9가지 대출 도메인 연습 프로젝트</span>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 </section>
+<!-- Modal Structure -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <h4 id="modalTitle"></h4>
+        <div id="modalContent"></div>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+</div>
+
+
 
 
 <section class="ftco-section" id="blog-section">
@@ -889,6 +916,7 @@
 <script src="js/aos.js"></script>
 <script src="js/jquery.animateNumber.min.js"></script>
 <script src="js/scrollax.min.js"></script>
+<script src="js/modal.js"></script> <!-- 추가한 JS 파일 -->
 
 <script src="js/main.js"></script>
 
